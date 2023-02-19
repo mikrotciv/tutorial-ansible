@@ -4,4 +4,4 @@
   become: true # Enables sudo
 
   tasks:
-    - include: tasks/packages.yml
+    - include_tasks: tasks/packages.yml
