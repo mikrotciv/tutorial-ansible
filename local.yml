@@ -4,6 +4,4 @@
   become: true # Enables sudo
 
   tasks:
-  - name: install htop
-    package:
-      name: htop
+    - include: tasks/packages.yml
