@@ -1,5 +1,31 @@
-- name: install packages
+# Package related tasks
+---
+
+# TODO: Figure out how to add sources
+#- name: Setup package management
+  
+- name: Install development packages
+  package:
+      - diffoscope
+      - git
+      - hugo
+      - plantuml
+      - tmux
+      - vim
+      - zeal
+
+- name: Install utility packages
   package:
     name:
       - htop
-      - tmux
+      - keypassxc
+      - pandoc
+      - restic
+      - stow
+      - vlc
+
+- name: Install network related
+  package:
+    name:
+      - iperf
+      - mosh
