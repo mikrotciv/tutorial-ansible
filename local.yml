@@ -9,13 +9,11 @@
   pre_tasks:
     - name: Performing pre tasks
       ansible.builtin.include_tasks: "{{ pre_task_name }}"
-      loop: "{{ pre_task_names }}"
+      loop:
+        - pre_tasks/required_packages.yml
+        - pre_tasks/package_source.yml
       loop_control:
         loop_var: pre_task_name
-      vars:
-        pre_task_names:
-          - pre_tasks/required_packages.yml
-          - pre_tasks/package_source.yml
 
   tasks:
     - name: Install packages
