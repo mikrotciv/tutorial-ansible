@@ -1,5 +1,0 @@
----
-- name: Packages related to networking
-  package:
-    - iperf
-    - mosh

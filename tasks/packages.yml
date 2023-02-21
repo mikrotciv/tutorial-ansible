@@ -11,16 +11,20 @@
       - zeal
     state: present
 
-# - name: Packages related to networking
-#   package:
-#     - iperf
-#     - mosh
+- name: Networking related packages
+  ansible.builtin.package:
+    name:
+      - iperf
+      - mosh
+    state: present
 
-# - name: Package related to utilities
-#   package:
-#     - htop
-#     - keypassxc
-#     - pandoc
-#     - restic
-#     - stow
-#     - vlc
+- name: Utility packages
+  ansible.builtin.package:
+    name:
+      - htop
+      - keypassxc
+      - pandoc
+      - restic
+      - stow
+      - vlc
+    state: present
