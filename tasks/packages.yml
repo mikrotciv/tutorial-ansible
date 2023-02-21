@@ -1,0 +1,24 @@
+---
+- name: Package related to development
+  package:
+    - diffoscope
+    - git
+    - hugo
+    - plantuml
+    - tmux
+    - vim
+    - zeal
+
+- name: Packages related to networking
+  package:
+    - iperf
+    - mosh
+
+- name: Package related to utilities
+  package:
+    - htop
+    - keypassxc
+    - pandoc
+    - restic
+    - stow
+    - vlc
