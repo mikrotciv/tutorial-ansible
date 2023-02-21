@@ -1,5 +1,21 @@
 ---
 
+####################################
+#   RedHat package related tasks   #
+####################################
+- name: Install RPM Fusion GPG keys
+  ansible.builtin.rpm_key:
+    key: "{{ rpm_fusion_gpg_key }}"
+    state: present
+  loop: "{{ gpg_keys }}"
+  loop_control:
+    loop_var: rpm_fusion_gpg_key
+  vars:
+    gpg_keys:
+      - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
+      - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
+  when: ansible_facts['os_family'] == "RedHat"
+
 - name: Install RPM Fusion free/non-free release package
   ansible.builtin.package:
     name: 

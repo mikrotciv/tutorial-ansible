@@ -1,0 +1,5 @@
+---
+
+- name: Packages needed before tasks
+  ansible.builtin.debug:
+    msg: "No packages required so far"
