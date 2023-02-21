@@ -1,6 +1,6 @@
-# Package related to development
 ---
-- package:
+- name: Package related to development
+  package:
   - diffoscope
   - git
   - hugo

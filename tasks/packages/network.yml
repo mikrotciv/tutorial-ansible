@@ -1,5 +1,5 @@
-# Packages related to networking
 ---
-- package:
+- name: Packages related to networking
+  package:
     - iperf
     - mosh
