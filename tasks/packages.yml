@@ -22,7 +22,7 @@
   ansible.builtin.package:
     name:
       - htop
-      - keypassxc
+      - keepassxc
       - pandoc
       - restic
       - stow

@@ -6,6 +6,10 @@
   connection: local
   become: true # Enables sudo
 
+  pre_tasks:
+    - name: Add package sources
+      ansible.builtin.include_tasks: pre_tasks/package_source.yml
+
   tasks:
-    - name: Include packages
+    - name: Install packages
       ansible.builtin.include_tasks: tasks/packages.yml
