@@ -1,8 +1,14 @@
 # Main config file
 ---
-- hosts: localhost
+- name: Play for setting up workstation
+  hosts: localhost
   connection: local
   become: true # Enables sudo
 
   tasks:
-    - include_tasks: tasks/packages.yml
+    - name: Include packages
+      ansible.builtin.include_tasks: "{{ item }}"
+      loop:
+        - tasks/packages/development.yml
+        - tasks/packages/utility.yml
+        - tasks/packages/network.yml

@@ -1,0 +1,10 @@
+# Package related to development
+---
+- package:
+  - diffoscope
+  - git
+  - hugo
+  - plantuml
+  - tmux
+  - vim
+  - zeal

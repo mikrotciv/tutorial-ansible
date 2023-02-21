@@ -1,0 +1,9 @@
+# Package related to utilities
+---
+- package:
+  - htop
+  - keypassxc
+  - pandoc
+  - restic
+  - stow
+  - vlc
