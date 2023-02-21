@@ -1,24 +1,26 @@
 ---
-- name: Package related to development
-  package:
-    - diffoscope
-    - git
-    - hugo
-    - plantuml
-    - tmux
-    - vim
-    - zeal
+- name: Development related packages
+  ansible.builtin.package:
+    name:
+      - diffoscope
+      - git
+      - hugo
+      - plantuml
+      - tmux
+      - vim
+      - zeal
+    state: present
 
-- name: Packages related to networking
-  package:
-    - iperf
-    - mosh
+# - name: Packages related to networking
+#   package:
+#     - iperf
+#     - mosh
 
-- name: Package related to utilities
-  package:
-    - htop
-    - keypassxc
-    - pandoc
-    - restic
-    - stow
-    - vlc
+# - name: Package related to utilities
+#   package:
+#     - htop
+#     - keypassxc
+#     - pandoc
+#     - restic
+#     - stow
+#     - vlc
